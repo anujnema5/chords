@@ -1,3 +1,4 @@
+import HeadingBox from '@/components/HeadingBox'
 import MobileNav from '@/components/MobileNav'
 import SearchNav from '@/components/SearchNav'
 import SectionContainer from '@/components/SectionContainer'
@@ -47,12 +48,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='bg-slate-300 dark:bg-slate-600 rounded-3xl mt-8 flex flex-col justify-center sm:w-[100%] w-[97%] mx-auto lg:sm:py-28 py-32 h-60 sm:px-7 px-9'>
+          <div className='bg-slate-200 dark:bg-slate-600 rounded-3xl mt-8 flex flex-col justify-center sm:w-[100%] w-[97%] mx-auto lg:sm:py-28 py-32 h-60 sm:px-7 px-9'>
             <h1 className='sm:text-3xl text-2xl font-semibold mx-auto xl:mx-0'>Popular Feeds 🔥</h1>
 
             <div className='flex flex-wrap gap-5 mt-6'>
               {featuredCategory?.map((tags) => (
-                <div key={tags.id} className='cursor-pointer mx-auto sm:w-64 w-28 sm:h-10 h-9 rounded-md hover:bg-zinc-700 hover:scale-105 hover:border-none flex items-center justify-center border-slate-500 whitespace-nowrap transition-all' style={{ border: "1px solid" }}>
+                <div key={tags.id} className='cursor-pointer mx-auto border sm:w-64 w-28 sm:h-10 h-9 rounded-md dark:hover:bg-slate-500 hover:bg-slate-300 hover:scale-105 flex items-center justify-center border-slate-400 whitespace-nowrap transition-all' >
                   <div className='flex justify-between'>                    
                     <h1 className='sm:text-sm text-xs font-medium'>{tags.title}</h1>
                   </div>
@@ -61,9 +62,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <h1 className='sm:text-3xl text-xs'>Latest Post</h1>
-
+          <div className='mt-8 sm:mt-10'>
+            <HeadingBox title="Latest Post 💡"/>
           </div>
         </div>
       </div>
