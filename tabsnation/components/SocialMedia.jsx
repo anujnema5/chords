@@ -2,16 +2,17 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { FacebookFilled, InstagramFilled, LinkOutlined, LinkedinFilled, LinkedinOutlined, MailFilled, MobileFilled, PhoneFilled, RedditCircleFilled, RedditSquareFilled } from '@ant-design/icons'
+import { FacebookFilled, GithubFilled, InstagramFilled, LinkOutlined, LinkedinFilled, LinkedinOutlined, MailFilled, MobileFilled, PhoneFilled, PlaySquareOutlined, RedditCircleFilled, RedditSquareFilled, YoutubeFilled } from '@ant-design/icons'
 // import Facebook from '../public/Facebook.svg'
 
-const SocialMedia = () => {
+const SocialMedia = ({footer}) => {
     return (
-        <div className='flex gap-5 px-1'>
-            <InstagramFilled className='text-slate-700 scale-150 rounded-2xl'/>
-            <FacebookFilled className='text-slate-700 scale-150 rounded-2xl'/>
-            <LinkedinFilled className='text-slate-700 scale-150 rounded-2xl'/>
-            <RedditCircleFilled className='text-slate-700 scale-150 rounded-2xl'/>
+        <div className={`flex ${footer ? "gap-4" : "gap-5"} px-3`}> 
+            <InstagramFilled className={`dark:text-gray-200 text-gray-600  ${footer ? "scale-125" : "scale-150"} rounded-2xl`}/>
+            <GithubFilled className={`dark:text-gray-200 text-gray-600  ${footer ? "scale-125" : "scale-150"} rounded-2xl`}/>
+            <FacebookFilled className={`dark:text-gray-200 text-gray-600  ${footer ? "scale-125" : "scale-150"} rounded-2xl`}/>
+            <RedditCircleFilled className={`dark:text-gray-200 text-gray-600  ${footer ? "scale-125" : "scale-150"} rounded-2xl`}/>
+            <YoutubeFilled className={`dark:text-gray-200 text-gray-600  ${footer ? "scale-125" : "scale-150"} rounded-2xl`}/>
         </div>
     )
 }

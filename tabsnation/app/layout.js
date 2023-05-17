@@ -1,6 +1,9 @@
 import './globals.css'
 import { Inter, Lora, Roboto } from 'next/font/google'
 import Provider from './provider'
+import SectionContainer from '@/components/SectionContainer'
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +24,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={""}>
-        <Provider>{children}</Provider>
+        <Provider>
+          <SectionContainer>
+            {children}
+          </SectionContainer>
+        </Provider>
       </body>
     </html>
   )
