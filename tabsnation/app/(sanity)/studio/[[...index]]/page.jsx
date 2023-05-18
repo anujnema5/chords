@@ -10,12 +10,12 @@
  */
 
 import { NextStudio } from 'next-sanity/studio'
-import config from '../../../sanity.config'
+import sanityConfig from '@/sanity.config'
 
 export default function StudioPage() {
   return (
     <div className='absolute w-full top-0 left-0 z-40'>
-      <NextStudio config={config} />
+      <NextStudio config={sanityConfig} />
     </div>
   )
 }

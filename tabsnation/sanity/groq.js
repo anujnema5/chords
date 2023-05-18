@@ -1,3 +1,5 @@
 import { groq } from "next-sanity";
 
-export const getAllPost = groq`*[_type == "post"]`
+const allPost = groq`*[_type == "post"] | order(_createdAt asc)`
+export {allPost}
+

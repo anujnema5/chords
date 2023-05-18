@@ -2,7 +2,7 @@ import React from 'react'
 
 const MobileNav = () => {
     return (
-        <div className='cursor-pointer sm:hidden block'>
+        <nav className='cursor-pointer sm:hidden block'>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -15,7 +15,7 @@ const MobileNav = () => {
                     clipRule="evenodd"
                 />
             </svg>
-        </div>
+        </nav>
     )
 }
 

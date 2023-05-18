@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { FacebookFilled, GithubFilled, InstagramFilled, LinkOutlined, LinkedinFilled, LinkedinOutlined, MailFilled, MobileFilled, PhoneFilled, PlaySquareOutlined, RedditCircleFilled, RedditSquareFilled, YoutubeFilled } from '@ant-design/icons'
 // import Facebook from '../public/Facebook.svg'
 
-const SocialMedia = ({footer}) => {
+const SocialIcons = ({footer}) => {
     return (
         <div className={`flex ${footer ? "gap-4" : "gap-5"} px-3`}> 
             <InstagramFilled className={`dark:text-gray-200 text-gray-600  ${footer ? "scale-125" : "scale-150"} rounded-2xl`}/>
@@ -17,4 +17,4 @@ const SocialMedia = ({footer}) => {
     )
 }
 
-export default SocialMedia
+export default SocialIcons

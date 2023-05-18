@@ -3,7 +3,7 @@ import React from 'react'
 import HeadingBox from '@/components/HeadingBox'
 import MobileNav from '@/components/MobileNav'
 import SearchNav from '@/components/SearchNav'
-import SocialMedia from '@/components/SocialMedia'
+import SocialMedia from '@/components/SocialIcons'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import { details, headerNavLinks } from '@/utils/data'
 import Link from 'next/link'
@@ -13,7 +13,7 @@ import '../utils/helper'
 const SectionContainer = ({ children }) => {
   return (
 
-    <div className='xl:lg:max-w-5xl sm:max-w-3xl mx-auto transition-all'>
+    <div className='xl:lg:max-w-5xl sm:max-w-3xl mx-auto transition-all border border-transparent'>
       <div className='min-h-screen flex flex-col'>
 
         <header className='w-full'>
