@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={""}>
+      <body className={""} >
         <Provider>
           <SectionContainer>
             {children}
@@ -33,3 +33,5 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+// style={{backgroundImage : "url(https://www.transparenttextures.com/patterns/batthern.png)"}}

@@ -13,7 +13,7 @@ import '../utils/helper'
 const SectionContainer = ({ children }) => {
   return (
 
-    <div className='xl:lg:max-w-5xl sm:max-w-3xl mx-auto transition-all border border-transparent'>
+    <div className='xl:lg:max-w-5xl sm:max-w-3xl mx-auto transition-all border border-transparent' >
       <div className='min-h-screen flex flex-col'>
 
         <header className='w-full'>
@@ -42,7 +42,7 @@ const SectionContainer = ({ children }) => {
           {children}
         </div>
 
-        <footer className='flex flex-col gap-5 p-3 items-center justify-center border-t sm:border-none'>
+        <footer className='flex flex-col gap-4 p-2 items-center justify-center border-t dark:border-gray-600 sm:border-none mt-6'>
           <div className='mt-3'>
           <SocialMedia footer={true} />
           </div>
