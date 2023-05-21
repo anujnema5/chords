@@ -1,7 +1,7 @@
 import React from 'react'
 import { POSTS_PER_PAGE } from '../../page'
 import PostList from '@/components/PostList';
-import { getAllPost } from '@/sanity/lib/client';
+import { getAllPost } from '@/sanity/lib/client'; 
 
 const page = async ({ params }) => {
     const posts = await getAllPost()
@@ -15,7 +15,7 @@ const page = async ({ params }) => {
     }
 
     return (
-        <PostList params="posts" title={"All Posts"} posts={posts} initialDisplayPosts={initialDisplayPosts} pagination={pagination} />
+        <PostList params="posts" title={"All Posts"} posts={posts} initialDisplayPosts={initialDisplayPosts} pagination={pagination}  />
     )
 }
 
