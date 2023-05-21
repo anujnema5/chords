@@ -1,7 +1,7 @@
 import { createClient } from 'next-sanity'
 import { groq } from 'next-sanity';
 import { apiVersion, dataset, projectId, useCdn } from '../env'
-import { allPost, currentPost, homePost } from '../groq';
+import { allPost, chords, currentPost, homePost } from '../groq';
 
 export const client = createClient({
   apiVersion,
@@ -22,6 +22,14 @@ export const getAllPost = async () => {
 export const getPostHome = async () => {
   if (client) {
     return (await client.fetch(homePost)) || [];
+  }
+
+  return [];
+}
+
+export const getChords = async () => {
+  if(client) {
+    return (await client.fetch(chords))
   }
 
   return [];

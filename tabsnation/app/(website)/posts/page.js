@@ -15,7 +15,7 @@ const page = async () => {
     }
 
     return (
-        <PostList posts={posts} title={"Posts"} pagination={pagination} initialDisplayPosts={initialDisplayPosts} />
+        <PostList posts={posts} params="posts" title={"All Posts"} pagination={pagination} initialDisplayPosts={initialDisplayPosts} />
     )
 }
 

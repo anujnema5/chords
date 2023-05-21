@@ -8,7 +8,7 @@ import { urlForImage } from '@/sanity/lib/image'
 const post = async ({ post }) => {
     // console.log(post);
     return (
-        <div className='border-2 border-red-600'>
+        <div className=''>
             <h1>{post.title}</h1>
             {post.mainImage && <Image
                 src={urlForImage(post.mainImage).width(200).url()}

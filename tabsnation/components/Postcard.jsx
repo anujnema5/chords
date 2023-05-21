@@ -1,30 +1,10 @@
-"use client"
-
-import { urlForImage } from '@/sanity/lib/image';
-import Link from 'next/link';
-import { useRouter } from "next/navigation";
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Author from './Author';
-import '../utils/helper';
-import Tag from '../public/Tags.svg';
-import Postcard from './Postcard';
-
-const PostContainer = ({ title, posts }) => {
-
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { urlForImage } from '@/sanity/lib/image'
+const Postcard = ({post}) => {
   return (
-    <div className='h-auto py-2'>
-      {title && (
-        <div className='dark:bg-gray-700 bg-gray-200 dark:text-gray-200 text-gray-600 ml-4 py-1 px-5 inline-block rounded-3xl cursor-pointer border dark:border-gray-400'>
-          <h2 className='sm:text-2xl text-lg font-medium inline-block'>{title}</h2>
-        </div>
-      )}
-
-      <div className='flex flex-wrap gap-5 px-6 sm:px-0 mt-7 rounded-xl sm:justify-center'>
-        {posts.length > 0 &&
-          posts.map((post) => (
-            // <Postcard post={post}/>
-            <article
+    <article
               href={`/${post.slug.current}`}
               className='w-full lg:w-80 sm:w-5/12 rounded-xl flex flex-col relative border dark:border-gray-500 border-gray-300 dark:bg-gray-700 bg-gray-200 items-center min-h-96 py-4'
               key={post.slug.current}
@@ -57,11 +37,7 @@ const PostContainer = ({ title, posts }) => {
                 </div>
               </div>
             </article>
-          ))}
-      </div>
-    </div>
-  );
-};
+  )
+}
 
-export default PostContainer;
-
+export default Postcard

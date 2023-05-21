@@ -1,7 +1,7 @@
 // IN FUTURE DYNAMIC FETCHING WOULD BE ENABLED
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-    { href: '/guitarchords', title: 'Chords' },
+    { href: '/chords', title: 'Chords' },
     { href: '/tags', title: 'Tags' },
     { href: '/dmca', title: 'DMCA' },
     { href: '/about', title: 'About' },
@@ -9,7 +9,7 @@ const headerNavLinks = [
   ]
 
   const featuredCategory = [
-    { href: '/guitarchords', title: 'guitar Chords', id : 1 },
+    { href: '/chords', title: 'guitar Chords', id : 1 },
     { href: '/ukulelechords', title: 'ukulele Chords', id : 2 },
     { href: '/pianochords', title: 'Piano Chords', id : 3 },
     { href: '/hindisongs', title: 'Hindi Songs', id : 4 },
