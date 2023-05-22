@@ -22,5 +22,7 @@ const headerNavLinks = [
     desc : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quod et facilis saepe laboriosam dignissimos blanditiis hic consectetur autem. Repudiandae vero explicabo illo natus.',
     developer : "Anuj Nema"
   }
+
+  const POSTS_PER_PAGE = 6;
   
-  export {headerNavLinks, featuredCategory, details}
+  export {headerNavLinks, featuredCategory, details, POSTS_PER_PAGE}
