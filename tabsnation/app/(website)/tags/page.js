@@ -23,7 +23,7 @@ const page = async () => {
             <div class="tag">
               <Link href={`/tag/${tag.tags.kebabCase()}`} class="no-underline relative inline-block text-sm font-medium text-slate-100 group">
                 <span class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 dark:bg-gray-100 bg-gray-600 group-hover:translate-y-0 group-hover:translate-x-0"></span>
-                <span class="relative block px-4 py-2 dark:bg-gray-600 bg-slate-300 border border-current dark:text-gray-200 text-gray-600">#{tag.tags.kebabCase().capitalizedString()} ({tag.length})</span>
+                <span class="relative block px-4 py-2 dark:bg-gray-600 bg-slate-100 border border-current dark:text-gray-200 text-gray-600">#{tag.tags.kebabCase().capitalizedString()} ({tag.length})</span>
               </Link>
             </div>
           ))}

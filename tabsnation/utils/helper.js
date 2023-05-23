@@ -1,4 +1,4 @@
-import { POSTS_PER_PAGE } from "./data";
+export const POSTS_PER_PAGE = 6;
 
 String.prototype.capitalizedString = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);

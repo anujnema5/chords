@@ -6,7 +6,7 @@ const headerNavLinks = [
     { href: '/tags', title: 'Tags' },
     { href: '/about', title: 'About' },
     { href: '/dmca', title: 'DMCA' },
-    { href: '/privacy-poilicy', title: 'Privacy policy' },
+    // { href: '/privacy-poilicy', title: 'Privacy policy' },
   ]
 
   const featuredCategory = [
@@ -24,6 +24,5 @@ const headerNavLinks = [
     developer : "Anuj Nema"
   }
 
-  const POSTS_PER_PAGE = 6;
   
-  export {headerNavLinks, featuredCategory, details, POSTS_PER_PAGE}
+  export {headerNavLinks, featuredCategory, details}

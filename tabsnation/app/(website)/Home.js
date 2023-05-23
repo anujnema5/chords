@@ -18,7 +18,7 @@ const Home = ({ posts }) => {
       </div>
 
       {/* HERE DISPLAYING THE POPULAR CATEGORY OF THE WEBSITE */}
-      <div className='bg-gray-200 dark:bg-gray-700 rounded-3xl mt-4 flex flex-col justify-center items-start sm:w-[96%] w-[90%] mx-auto sm:py-32 py-32 h-60 px-7'>
+      <div className='bg-gray-200 dark:bg-gray-700 rounded-3xl mt-4 flex flex-col justify-center items-start sm:w-[96%] w-[90%] mx-auto sm:py-10 py-9 h-auto px-9'>
 
         <h1 className='sm:text-3xl text-2xl font-semibold mx-auto xl:mx-5 dark:text-gray-300 text-gray-700'>Popular on Feeds 🔥</h1>
 

@@ -10,7 +10,7 @@ const page = async () => {
   const data = await initPagination(posts);
 
   return (
-    <PostList posts={posts} params="search" title={"Search"} paginationData={data} />
+    <PostList posts={posts} params="search" title={"Search post"} paginationData={data} />
   )
 }
 
