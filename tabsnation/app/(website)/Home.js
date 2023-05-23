@@ -24,13 +24,12 @@ const Home = ({ posts }) => {
 
         <div className='flex flex-wrap gap-5 mt-7'>
           {featuredCategory?.map((tags) => (
-
-            <div key={tags.id} className='cursor-pointer mx-auto border sm:w-64 w-28 sm:h-10 h-9 rounded-md dark:hover:bg-gray-600 hover:bg-gray-300 hover:scale-105 flex items-center justify-center border-gray-400 whitespace-nowrap transition-all' >
+            <Link href={tags.href} key={tags.id} className='cursor-pointer mx-auto border sm:w-64 w-28 sm:h-10 h-9 rounded-md dark:hover:bg-gray-600 hover:bg-gray-300 hover:scale-105 flex items-center justify-center border-gray-400 whitespace-nowrap transition-all' >
               <div className='flex justify-between'>
                 <h3 className='sm:text-sm text-xs font-medium text-gray-600 dark:text-gray-50'>{tags.title.capitalizedString()}</h3>
               </div>
 
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -41,7 +40,7 @@ const Home = ({ posts }) => {
       </div>
 
       <div className='w-full  flex justify-end px-8 mt-3'>
-        <Link href={'/posts'} className='px-2 py-1 border dark:border-gray-600 dark:hover:bg-gray-600 dark:bg-gray-700 bg-gray-200 rounded-lg transition-all focus:bg-red-600'>View All Posts 📖</Link>
+        <Link href={'/posts'} className='px-2 py-1 border dark:border-gray-600 dark:hover:bg-gray-600 dark:bg-gray-700 bg-gray-200 rounded-lg transition-all'>View All Posts 📖</Link>
       </div>
     </div>
   )

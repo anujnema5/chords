@@ -4,8 +4,17 @@ String.prototype.capitalizedString = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
+String.prototype.kebabCase = function () {
+  return this.split(" ").join("-");
+}
+
+String.prototype.SplitJoin = function () {
+  return this.split("-").join(" ");
+}
+
+
 export const dynamicPagination = async (params, posts) => {
-  const pageNumber = parseInt(params.slug);
+  const pageNumber = parseInt(params);
 
   const initialDisplayPosts = posts.slice(POSTS_PER_PAGE * (pageNumber - 1), POSTS_PER_PAGE * pageNumber);
 
@@ -20,6 +29,24 @@ export const dynamicPagination = async (params, posts) => {
     posts
   }
 }
+
+// export const dynamicPagination2 = async (params, posts) => {
+//   const pageNumber = parseInt(params);
+//   console.log(posts);
+
+//   const initialDisplayPosts = posts.slice(POSTS_PER_PAGE * (pageNumber - 1), POSTS_PER_PAGE * pageNumber);
+
+//   const pagination = {
+//     currentPage: pageNumber,
+//     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE)
+//   }
+
+//   return {
+//     initialDisplayPosts,
+//     pagination,
+//     posts
+//   }
+// }
 
 
 export const initPagination = async (posts) => {

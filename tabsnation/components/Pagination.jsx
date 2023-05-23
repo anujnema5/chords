@@ -19,11 +19,11 @@ const Pagination = ({ currentPage, totalPages, params }) => {
                 {currentPage} of {totalPages}
             </span>
 
-
-            {nextPage && (<Link href={`/${params}/page/${currentPage + 1}`}>
-                <button rel="next">Next</button>
-            </Link>)}
-
+            {nextPage && (
+                <Link href={`/${params}/page/${currentPage + 1}`}>
+                    <button rel="next">Next</button>
+                </Link>
+            )}
 
             {!nextPage && (
                 <button className='dark:text-gray-500' rel="previous" disabled={true}>Next</button>

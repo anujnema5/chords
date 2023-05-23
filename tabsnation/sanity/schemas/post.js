@@ -1,3 +1,5 @@
+import { SlugInput } from "sanity";
+
 const post = {
   name: 'post',
   title: 'Post',
@@ -55,10 +57,24 @@ const post = {
       name: 'tags',
       type: 'array',
       of: [{ type: 'string' }],
+      validation: Rule =>
+        Rule.custom((tags) => {
+          const lowercaseTags = tags.map(tag => tag.toLowerCase());
+          if (lowercaseTags.join() !== tags.join()) {
+            return 'Tags should be in lowercase.';
+          } else if(tags.some(tag=>tag.charAt(tag.length)===' ')) {
+            return 'No space allowed after tag'
+          }  
+          else if(tags.some(tag=>tag.includes('-'|| '*'))) {
+            return 'You cannot add - between Tags'
+          }
+          return true; // Validation passed
+        }),
       options: {
-        layout: 'tags'
-      }
+        layout: 'tags',
+      },
     },
+
     {
       title: 'Main Body',
       name: 'body',

@@ -12,15 +12,46 @@ export default defineType({
   icon: TagIcon,
   fields: [
     defineField({name: 'title', type: 'string'}),
+    // defineField({
+    //   name: 'parent',
+    //   type: 'reference',
+    //   to: [{type: 'category'}],
+    //   // This ensures we cannot select other "children"
+    //   options: {
+    //     filter: '!defined(parent)',
+    //   },
+    // }),
     defineField({
-      name: 'parent',
-      type: 'reference',
-      to: [{type: 'category'}],
-      // This ensures we cannot select other "children"
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
       options: {
-        filter: '!defined(parent)',
+        source: 'title',
+        maxLength: 96,
       },
     }),
+
+    defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text',
+        }
+      ]
+    }),
+
+    defineField({
+      name : 'description',
+      title : 'Description',
+      type : 'text'
+    })
   ],
   // Customize the preview so parents are visualized in the studio
   preview: {

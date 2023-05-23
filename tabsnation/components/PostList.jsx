@@ -10,7 +10,6 @@ import '../utils/helper'
 
 
 const PostList = ({ title, params, paginationData }) => {
-  console.log(paginationData);
   const {initialDisplayPosts, posts} = paginationData;
   const {currentPage, totalPages} = paginationData.pagination;
   const pagination = paginationData.pagination;

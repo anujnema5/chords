@@ -6,7 +6,7 @@ import { dynamicPagination } from '@/utils/helper';
 
 const page = async ({ params }) => {
     const posts = await getChords()
-    const data = await dynamicPagination(params, posts);
+    const data = await dynamicPagination(params.slug, posts);
 
     return (
         <PostList params="chords" title="All Guitar/Ukulele Chords" paginationData={data}/>

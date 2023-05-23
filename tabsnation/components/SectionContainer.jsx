@@ -17,7 +17,7 @@ const SectionContainer = ({ children }) => {
       <div className='min-h-screen flex flex-col'>
 
         <header className='w-full'>
-          <nav className='flex items-center justify-between px-5 py-7 border-b border-gray-600'>
+          <nav className='flex items-center justify-between px-5 py-7 border-b dark:border-gray-600 border-gray-400'>
             <div>
               <Link href={'/'}>
                 <h1 className='sm:text-3xl font-bold text-2xl dark:text-gray-200 text-gray-700'>{details.title.capitalizedString()}</h1>

@@ -1,7 +1,7 @@
 import { createClient } from 'next-sanity'
 import { groq } from 'next-sanity';
 import { apiVersion, dataset, projectId, useCdn } from '../env'
-import { allPost, chords, currentPost, homePost } from '../groq';
+import { allPost, categories, chords, currentPost, homePost, tags } from '../groq';
 
 export const client = createClient({
   apiVersion,
@@ -27,9 +27,31 @@ export const getPostHome = async () => {
   return [];
 }
 
+export const getTags = async () => {
+  if (client) {
+    return (await client.fetch(tags))
+  }
+}
+
 export const getChords = async () => {
-  if(client) {
+  if (client) {
     return (await client.fetch(chords))
+  }
+
+  return [];
+}
+
+export const getPostByTags = async (query) => {
+  const queryString = groq`*['${query}' in tags] {
+    title,
+    body,
+    slug,
+    mainImage,
+    tags
+  }`
+
+  if (client) {
+    return (await client.fetch(queryString));
   }
 
   return [];
@@ -40,6 +62,30 @@ export const getCurrentPost = async (slug) => {
   if (client) {
     return (await client.fetch(query))[0] || [];
   }
+  return {};
+}
+
+export const getCategories = async () => {
+  if (client) {
+    return (await client.fetch(categories))
+  }
+
+
   return [];
 }
 
+export const getPostByCategories = async (query) => {
+  const queryString = groq`*[count((categories[]->slug.current)[@ in ["${query}"]]) > 0] {
+    title,
+    body,
+    slug,
+    mainImage,
+    tags
+  }`
+
+  if (client) {
+    return (await client.fetch(queryString))
+  }
+
+  return [];
+}
