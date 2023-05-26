@@ -45,7 +45,8 @@ const PostList = ({ title, params, paginationData }) => {
 
           {displayPosts?.length !== 0 ? displayPosts?.map((post, index) => (
             <Postcard post={post} key={index}/>
-          )) : <h1 className='text-2xl font-semibold' key={index}>Sorry!! No post Found</h1>}
+          )) : <h1 className='text-2xl font-semibold'>No post found
+          </h1>}
         </div>
         {pagination && pagination.totalPages > 1 && !searchValue && (
           <Pagination currentPage={currentPage} totalPages={totalPages} params={params} />
