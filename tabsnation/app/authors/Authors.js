@@ -15,8 +15,8 @@ const Authors = ({authors}) => {
             <h1 className='sm:text-4xl text-2xl font-semibold dark:text-gray-200 text-gray-700'>Authors</h1>
 
             <div class=" w-full flex sm:flex-row flex-col flex-wrap items-center justify-between gap-4 sm:mt-3">
-                {authors.length > 0 && authors.map((card) => (
-                    <Link href={`/author/${card.slug.current}/`} className='flex items-center dark:bg-gray-700 rounded-xl border dark:border-gray-500 border-gray-300 px-2 sm:w-2/5
+                {authors.length > 0 && authors.map((card, index) => (
+                    <Link href={`/author/${card.slug.current}/`} key={index + 1} className='flex items-center dark:bg-gray-700 rounded-xl border dark:border-gray-500 border-gray-300 px-2 sm:w-2/5
               w-full sm:min-h-34 h-28 hover:scale-105 cursor-pointer transition-all'>
                         {
                             card.image ? (

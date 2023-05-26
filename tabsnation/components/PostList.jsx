@@ -43,9 +43,9 @@ const PostList = ({ title, params, paginationData }) => {
 
         <div className='flex flex-wrap gap-5 px-6 sm:px-0 mt-7 rounded-xl sm:justify-center'>
 
-          {displayPosts?.length !== 0 ? displayPosts?.map((post) => (
-            <Postcard post={post} />
-          )) : <h1 className='text-2xl font-semibold'>Sorry!! No post Found</h1>}
+          {displayPosts?.length !== 0 ? displayPosts?.map((post, index) => (
+            <Postcard post={post} key={index}/>
+          )) : <h1 className='text-2xl font-semibold' key={index}>Sorry!! No post Found</h1>}
         </div>
         {pagination && pagination.totalPages > 1 && !searchValue && (
           <Pagination currentPage={currentPage} totalPages={totalPages} params={params} />
