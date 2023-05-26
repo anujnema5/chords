@@ -44,9 +44,9 @@ const post = async ({ post }) => {
                         </Link>
                     </div>
 
-                    <button className='fixed rounded-xl bottom-11 right-11 bg-green-700 w-20 h-7'>
+                    {/* <button className='fixed rounded-xl bottom-11 right-11 bg-green-700 w-20 h-7'>
                         Play
-                    </button>
+                    </button> */}
                 </div>
 
                 <div className='sm:w-2/3 w-full border dark:border-gray-500 mb-5'></div>
