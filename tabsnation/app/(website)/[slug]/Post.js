@@ -10,27 +10,6 @@ import Comment from '@/components/Comment';
 
 
 const post = async ({ post }) => {
-    const [readMore, setReadMore] = useState(false);
-    const articleRef = useRef(null);
-
-
-    const handleScrollToBottom = (position, step) => {
-
-    };
-
-    const handleScroll = () => {
-        // var maxScrollPosition = document.querySelector('body').scrollHeight - document.querySelector('body').clientHeight;
-        // window.scrollTo(0, window.clientHeight)?
-        let body = document.body,
-            html = document.documentElement;
-
-        let height = Math.max(body.scrollHeight, body.offsetHeight,
-            html.clientHeight, html.scrollHeight, html.offsetHeight);
-
-
-    };
-
-
     const author = await getAuthorForPost(post.author._ref);
     const bio = author.bio[0].children[0].text
 
@@ -38,7 +17,7 @@ const post = async ({ post }) => {
 
     return (
         <>
-            <article className=' flex flex-col flex-wrap justify-center items-start px-5 mt-5' ref={articleRef}>
+            <article className=' flex flex-col flex-wrap justify-center items-start px-5 mt-5' >
                 <h1 className='sm:text-4xl font-medium text-left text-xl'>{post.title}</h1>
 
                 <div className='flex items-center justify-center'>
@@ -65,7 +44,7 @@ const post = async ({ post }) => {
                         </Link>
                     </div>
 
-                    <button onClick={handleScroll} className='fixed rounded-xl bottom-11 right-11 bg-green-700 w-20 h-7'>
+                    <button className='fixed rounded-xl bottom-11 right-11 bg-green-700 w-20 h-7'>
                         Play
                     </button>
                 </div>
