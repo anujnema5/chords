@@ -9,7 +9,7 @@ const page = async ({ params }) => {
     const data = await dynamicPagination(params.slug, posts);
 
     return (
-        <PostList params="chords" title="All Guitar/Ukulele Chords" paginationData={data}/>
+        <PostList params="chords" title={`All Guitar/Ukulele Chords - Page ${params.slug}`} paginationData={data}/>
     )
 }
 

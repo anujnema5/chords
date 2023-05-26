@@ -9,7 +9,7 @@ const page = async ({ params }) => {
     const data = await dynamicPagination(params.slug, posts)
 
     return (
-        <PostList params={"posts"} title={"All Posts"} paginationData={data}/>
+        <PostList params={"posts"} title={`All Posts page - ${params.slug}`} paginationData={data}/>
     )
 }
 
