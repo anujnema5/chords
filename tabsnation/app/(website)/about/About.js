@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const About = () => {
   return (
@@ -7,21 +8,21 @@ const About = () => {
       <div className="lg:pl-20  flex flex-col justify-center items-center">
 
       <div className="max-w-xs px-2.5 lg:max-w-none">
-        <img alt="" loading="lazy" width="3024" height="4032" decoding="async" data-nimg="1" className="aspect-square rotate-3 rounded-2xl bg-gray-100 object-cover object-center dark:bg-gray-800  " sizes="(min-width: 1024px) 32rem, 20rem"
+        <Image alt="" loading="lazy" width="3024" height="4032" decoding="async" data-nimg="1" className="aspect-square rotate-3 rounded-2xl bg-gray-100 object-cover object-center dark:bg-gray-800  " sizes="(min-width: 1024px) 32rem, 20rem"
         srcSet='https://w0.peakpx.com/wallpaper/602/439/HD-wallpaper-iphone-emoji-boy-ideas-emoji-emoji-emoji.jpg'
            style={{color: "transparent"}} />
 
       </div>
       </div>
 
-      <div className="lg:order-first lg:row-span-2"><h1 className="text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">I'm Anuj Nema.
+      <div className="lg:order-first lg:row-span-2"><h1 className="text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">I&apos;m Anuj Nema.
         <br /> I live in Bhopal, where I design the future.</h1>
 
         <div className="mt-6 space-y-7 text-base text-gray-600 dark:text-gray-400">
           <p>I am a Creative Coder, Blogger and self-proclaimed Designer who specializes in web development.</p> <p>In my swiss army knife of FullStack skills, Design & React/Next is my sharpest blade.
           </p>
 
-          <p>From here on out, it's just Onwards and Upwards 🚀 </p>
+          <p>From here on out, it&apos;s just Onwards and Upwards 🚀 </p>
           <p>
             <a className="underline underline-offset-4 hover:text-gray-500" target='_blank' href="https://twitter.com/anujnema1011">Feel free to reach out</a> if you want to talk about work, technology or just geek out in general 🤓
           </p>
