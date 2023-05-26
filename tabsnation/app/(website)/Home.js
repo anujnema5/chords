@@ -10,7 +10,7 @@ const Home = ({ posts }) => {
     <div className='w-full' >
       {/* THE HOMEPAGE SSECTION WHERE WE INTRODUCE THE SITE TO THE USER */}
       <div className='  sm:w-2/3 w-full py-7 sm:py-8 px-6'>
-        <h1 className='sm:text-4xl text-2xl font-bold dark:text-gray-300 text-gray-700'>{details.title.capitalizedString()} - Lorem, ipsum <br />Lorem ipsumt..</h1>
+        <h1 className='sm:text-4xl text-2xl font-bold dark:text-gray-300 text-gray-700 border border-transparent '>{details.title.capitalizedString()} - {details.subtitle}</h1>
         <p className='mt-4 dark:text-gray-300 text-gray-500'>{details.desc}</p>
         <div className='social-media mt-8 text-gray-600'>
           <SocialMedia />

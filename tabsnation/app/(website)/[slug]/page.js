@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 
 const page = async ({ params }) => {
   const post = await getCurrentPost(params.slug);
+  
   return (Object.keys(post).length > 0 ? <Post post={post} /> : notFound()
 
   )

@@ -19,6 +19,7 @@ const page = async ({ params }) => {
 
     } else {
         categories = await getPostByCategories(query);
+        // console.log(categories);
         data = await initPagination(categories);
     }
 

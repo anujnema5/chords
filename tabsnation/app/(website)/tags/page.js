@@ -17,7 +17,7 @@ const page = async () => {
   return (
     <>
       <div className='w-full  flex flex-col justify-center items-center '>
-        <h1 className='text-4xl font-semibold mx-auto sm:mt-12 mt-10'>Tags</h1>
+        <h1 className='text-4xl font-semibold mx-auto sm:mt-12 mt-10 dark:text-gray-200 text-gray-700'>Tags</h1>
         <div className='flex gap-4 flex-wrap justify-center mt-7'>
           {result.length > 0 && result?.map((tag, index) => (
             <div class="tag">
