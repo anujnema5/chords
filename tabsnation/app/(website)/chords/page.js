@@ -7,6 +7,7 @@ const page = async () => {
   const data = await initPagination(posts);
 
   return (
+    
     <PostList params="chords"title={"All Guitar/Ukulele Posts"} paginationData={data} />
   )
 }
