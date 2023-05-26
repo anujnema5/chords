@@ -22,9 +22,9 @@ const Postcard = ({ post }) => {
         />
       )}
       <div className='w-full h-full flex flex-col justify-center items-start gap-4 px-5 mt-5 '>
-        <Link href={`/${post.slug.current}`} target='_blank' className='text-xl font-medium dark:text-gray-200 text-gray-600 hover:underline'>
+        <a href={`${post.slug.current}`} className='text-xl font-medium dark:text-gray-200 text-gray-600 hover:underline'>
           {post.title}
-        </Link>
+        </a>
 
         <div className='flex flex-wrap gap-2 whitespace-nowrap'>
           {post?.tags?.slice(0, 2).map((tag, index) => (
