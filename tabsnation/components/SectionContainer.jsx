@@ -42,7 +42,7 @@ const SectionContainer = ({ children }) => {
           {children}
         </div>
 
-        <footer className='flex flex-col gap-4 p-2 pt-3 items-center justify-center border-t dark:border-gray-600 dark:border-none   mt-6'>
+        <footer className='flex flex-col gap-4 p-2 pt-3 items-center justify-center border-t dark:border-gray-600   mt-6'>
           <div className='mt-3'>
           <SocialMedia footer={true} />
           </div>
