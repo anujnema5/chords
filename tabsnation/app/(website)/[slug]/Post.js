@@ -50,11 +50,11 @@ const post = async ({ post }) => {
                 </div>
 
                 <div className='sm:w-2/3 w-full border dark:border-gray-500 mb-5'></div>
-                <section className='w-full break-words'>
+                <section className='w-full break-words '>
                     <PortableText value={post.body} components={Richtext} />
                 </section>
 
-                <div className='sm:w-8/12 lg:w-6/12 w-full dark:bg-gray-700 rounded-2xl py-4 px-4 mb-8 border dark:border-gray-600 border-gray-300 sm:mt-14 mt-10'>
+                <div className='sm:w-8/12 lg:w-6/12 w-full dark:bg-gray-700 rounded-2xl py-4 px-4 mb-3 border dark:border-gray-600 border-gray-300 sm:mt-10 mt-5'>
                     <div className='flex justify-center items-center gap-3'>
                         <Image
                             src={urlForImage(author.image).width(200).url()}
