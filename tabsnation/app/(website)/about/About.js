@@ -5,15 +5,15 @@ const About = () => {
   return (
     <div className="relative px-4 sm:px-8 lg:px-12"><div className="mx-auto max-w-2xl lg:max-w-5xl"><div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 mt-12">
       
-      <div className="lg:pl-20  flex flex-col justify-center items-center">
+      {/* <div className="lg:pl-20  flex flex-col justify-center items-center border">
 
-      <div className="max-w-xs px-2.5 lg:max-w-none">
-        <Image alt="" loading="lazy" width="3024" height="4032" decoding="async" data-nimg="1" className="aspect-square rotate-3 rounded-2xl bg-gray-100 object-cover object-center dark:bg-gray-800  " sizes="(min-width: 1024px) 32rem, 20rem"
-        srcSet='https://w0.peakpx.com/wallpaper/602/439/HD-wallpaper-iphone-emoji-boy-ideas-emoji-emoji-emoji.jpg'
+      <div className="max-w-xs px-2.5 lg:max-w-none border">
+        <Image alt="" loading="lazy" width={100} height={100} decoding="async" data-nimg="1" className="aspect-square rotate-3 rounded-2xl bg-gray-100 object-cover object-center dark:bg-gray-800  " sizes="(min-width: 1024px) 32rem, 20rem"
+        srcSet='https://stickerly.pstatic.net/sticker_pack/mKuuZnqwNpYjwAwBxKpEg/EJMJ92/35/c54ad0ed-8b15-481d-a692-64391740a193.png'
            style={{color: "transparent"}} />
 
       </div>
-      </div>
+      </div> */}
 
       <div className="lg:order-first lg:row-span-2"><h1 className="text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">I&apos;m Anuj Nema.
         <br /> I live in Bhopal, where I design the future.</h1>
@@ -29,7 +29,7 @@ const About = () => {
         </div>
 
       </div>
-      <div className="lg:pl-20">
+      <div className="lg:pl-20 mt-5">
         <ul role="list">
           
           <li className="flex"><a className="group flex text-sm font-medium text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-500" href="https://twitter.com/anujnema1011">

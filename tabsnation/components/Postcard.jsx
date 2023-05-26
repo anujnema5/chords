@@ -7,8 +7,8 @@ import '../utils/helper'
 
 const Postcard = ({ post }) => {
   return (
+    // <Link href={`/${post.slug.current}`}>
     <article
-      href={`/${post.slug.current}`}
       className='w-full lg:w-80 sm:w-5/12 rounded-xl flex flex-col relative border dark:border-gray-500 border-gray-300 dark:bg-gray-700 bg-gray-200 items-center min-h-96 py-4 hover:scale-105 transition-all'
       key={post.slug.current}
     >
@@ -22,9 +22,9 @@ const Postcard = ({ post }) => {
         />
       )}
       <div className='w-full h-full flex flex-col justify-center items-start gap-4 px-5 mt-5 '>
-        <Link href={`/${post.slug.current}`} className='text-xl font-medium dark:text-gray-200 text-gray-600 hover:underline'>
+        <a href={`/${post.slug.current}`} className='text-xl font-medium dark:text-gray-200 text-gray-600 hover:underline'>
           {post.title}
-        </Link>
+        </a>
 
         <div className='flex flex-wrap gap-2 whitespace-nowrap'>
           {post?.tags?.slice(0, 2).map((tag, index) => (
@@ -41,6 +41,8 @@ const Postcard = ({ post }) => {
         {/* <Link className='cursor-pointer border bg-gray-200 text-gray-800' href={`/${post.slug.current}`}>Read More</Link> */}
       </div>
     </article>
+    // </Link>
+
   )
 }
 
