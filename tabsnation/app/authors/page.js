@@ -6,7 +6,7 @@ const page = async () => {
   const authors = await getAuthors();
 
   return (
-    <Authors authors={authors} />
+    <Authors authors={authors} /> 
   )
 }
 
