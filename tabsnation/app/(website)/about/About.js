@@ -29,7 +29,7 @@ const About = () => {
         </div>
 
       </div>
-      <div className="lg:pl-20 mt-5">
+      <div className="lg:pl-20 sm:mt-5 -mt-6">
         <ul role="list">
           
           <li className="flex"><a className="group flex text-sm font-medium text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-500" href="https://twitter.com/anujnema1011">
