@@ -15,20 +15,26 @@ const post = async ({ post }) => {
 
 
     const handleScrollToBottom = (position, step) => {
-        
-      };
-    
-      const handleScroll = () => {
+
+    };
+
+    const handleScroll = () => {
         // var maxScrollPosition = document.querySelector('body').scrollHeight - document.querySelector('body').clientHeight;
         // window.scrollTo(0, window.clientHeight)?
+        let body = document.body,
+            html = document.documentElement;
 
-      };
-    
+        let height = Math.max(body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+
+    };
+
 
     const author = await getAuthorForPost(post.author._ref);
     const bio = author.bio[0].children[0].text
 
-    
+
 
     return (
         <>
@@ -69,7 +75,7 @@ const post = async ({ post }) => {
                     <PortableText value={post.body} components={Richtext} />
                 </section>
 
-                <div className='sm:w-8/12 lg:w-6/12 w-full dark:bg-gray-700 rounded-2xl py-4 px-4 mb-8 border dark:border-gray-600 border-gray-300 mt-4'>
+                <div className='sm:w-8/12 lg:w-6/12 w-full dark:bg-gray-700 rounded-2xl py-4 px-4 mb-8 border dark:border-gray-600 border-gray-300 sm:mt-14 mt-10'>
                     <div className='flex justify-center items-center gap-3'>
                         <Image
                             src={urlForImage(author.image).width(200).url()}
