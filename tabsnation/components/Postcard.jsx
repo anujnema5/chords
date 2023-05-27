@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,7 +21,7 @@ const Postcard = ({ post }) => {
         />
       )}
       <div className='w-full h-full flex flex-col justify-center items-start gap-4 px-5 mt-5 '>
-        <a href={`${post.slug.current}`} className='text-xl font-medium dark:text-gray-200 text-gray-600 hover:underline'>
+        <a href={`/${post.slug.current}`} className='text-xl font-medium dark:text-gray-200 text-gray-600 hover:underline'>
           {post.title}
         </a>
 
